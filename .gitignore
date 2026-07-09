@@ -1,0 +1,4 @@
+﻿.env
+daily_english_output.json
+__pycache__/
+*.pyc
