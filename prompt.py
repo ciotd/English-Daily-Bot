@@ -11,6 +11,14 @@ TOPICS = [
     "방 정리하기",
     "공부 시작 전 마음 정리하기",
     "자기 전에 하루를 돌아보기",
+    "숙취로 힘든 아침에 오늘 하루 어떻게 보낼지 고민하기",
+    "갑자기 컴퓨터나 일이 안 풀릴 때 혼잣말",
+    "저녁 메뉴 뭐 먹을지 고민하기",
+    "예상치 못한 귀찮은 일이 생겼을 때 대처 고민하기",
+    "주말에 뭐 하고 놀지 고민하기",
+    "가기 싫은 약속을 취소할지 말지 고민하기",
+    "돈을 너무 많이 썼을 때 자책하기",
+    "월요일 아침 출근하기 싫은 마음 달래기",
 ]
 
 JSON_SCHEMA_EXAMPLE = """{
@@ -56,6 +64,7 @@ Requirements:
 - Write exactly 10 sentences that form a single natural, connected self-talk monologue (not disconnected example sentences).
 - Use 3-5 simple sentences and 5-7 complex sentences. Complex sentences may use relative clauses, relative adverb clauses, adverbial clauses, conditional clauses, time clauses, multiple connected clauses, or chains of prepositional/adverbial phrases.
 - Use everyday phrasal verbs and natural spoken expressions a native speaker would actually use. Avoid academic, literary, or overly dramatic language.
+- Tone: this should sound like a real, unfiltered inner monologue, not a self-help pep talk. Include genuine hesitation and rhetorical self-questions ("Why isn't this working?", "Should I just...?", "What am I even going to do about...?"), mild complaining, indecision between options, and small mundane worries. Avoid neat, resolved, motivational endings — real self-talk is often messy, unresolved, or trails off. For example, a monologue about a rough hungover morning might sound like: "Ugh, why is this suddenly not working. My head is pounding — I probably drank way too much last night. Should I just take the afternoon off and head home early? What would I even do once I get home, though. Do I even have anything to eat at home. Maybe I should just order something for dinner. I'm not feeling great right now, so..." Match that level of realism and rhetorical questioning regardless of the topic given below.
 - Include about 3 moderately difficult but commonly used words (e.g. overwhelmed, tedious, relieved, cluttered, distracted, hesitant) that are useful but not too technical.
 - literal_translation: word-for-word Korean translation preserving English sentence structure, even if awkward, for structural/reading-speed practice.
 - natural_translation: natural, casual (반말) Korean translation that conveys the real meaning.
