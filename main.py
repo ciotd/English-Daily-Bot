@@ -4,9 +4,11 @@ import argparse
 import json
 import random
 import sys
+import time
 from datetime import date as date_cls
 
 from dotenv import load_dotenv
+from google.genai.errors import APIError
 
 from formatter import build_blocks
 from llm_client import generate_daily_content, validate_content
@@ -15,18 +17,21 @@ from prompt import TOPICS
 
 OUTPUT_PATH = "daily_english_output.json"
 MAX_ATTEMPTS = 3
+RETRY_BACKOFF_SECONDS = 15
 
 
 def generate_and_validate(today: str, topic: str) -> dict:
     last_error = None
     for attempt in range(1, MAX_ATTEMPTS + 1):
-        data = generate_daily_content(today, topic)
         try:
+            data = generate_daily_content(today, topic)
             validate_content(data)
             return data
-        except ValueError as exc:
+        except (ValueError, APIError) as exc:
             last_error = exc
-            print(f"Validation failed on attempt {attempt}: {exc}", file=sys.stderr)
+            print(f"Attempt {attempt} failed: {exc}", file=sys.stderr)
+            if attempt < MAX_ATTEMPTS:
+                time.sleep(RETRY_BACKOFF_SECONDS * attempt)
     raise RuntimeError(f"Failed to generate valid content after {MAX_ATTEMPTS} attempts: {last_error}")
 
 
