@@ -74,6 +74,7 @@ Requirements:
 - difficult_words: exactly 3 words, each with the word, its Korean meaning, and an English example sentence.
 - memorization_sentences: exactly 3 sentences, and they MUST be selected verbatim from english_monologue. Prefer sentences that best showcase phrasal verbs, grammar structures, or everyday expressions, and that are useful for speaking practice.
 - chunk_practice: exactly 3 entries, one per memorization sentence, with "sentence" matching the memorization_sentences text exactly, broken into natural speaking chunks.
+- Include natural English sentences in which signs, notices, instructions, maps, schedules, messages, documents, or other information sources act as the subject and "say," "tell," "show," "suggest," or "indicate" something. For example: "The sign said not to turn right," "The schedule says the train leaves at six," or "The instructions tell you to restart the device." Use these English-style structures when Korean would more naturally describe the rule, information, or situation without making the object the grammatical subject.
 - status must be exactly "Not Memorized".
 - title must be exactly "{date} Daily English Monologue".
 
